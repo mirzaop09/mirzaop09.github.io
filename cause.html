@@ -1,40 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why You're My Best Friend! 💖</title>
+    <title>Why You're My Love 💖</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="./cause.css">
     <style>
-       
+        #translateBtn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
-    <div class="custom-cursor">
-        <svg viewBox="0 0 24 24">
-            <path fill="#ff69b4" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-    </div>
+    <button id="translateBtn">Translate</button><div class="custom-cursor">
+    <svg viewBox="0 0 24 24">
+        <path fill="#ff69b4" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+</div>
 
-    <div class="container">
-        <h1>Why You're My Best Friend! 💖</h1>
-        
-        <div id="reasons-container"></div>
-        
-        <button class="shuffle-button">Tell Me Another Reason 💕</button>
-        <div class="reason-counter"></div>
+<div class="container">
+    <h1>Why You're My Love 💖</h1>
+    <div id="reasons-container"></div>
+    <button class="shuffle-button">Tell Me Another Reason 💕</button>
+    <div class="reason-counter"></div>
 
-        <div class="ending-section">
-            <div class="teddy-hug">
-                <img src="./d1.jpg" alt="Teddy Hug">
-            </div>
-            <div class="ending-text">You're the BESTEST Best Friend EVER! 💖</div>
+    <div class="ending-section">
+        <div class="teddy-hug">
+            <img src="./d1.jpg" alt="Teddy Hug">
         </div>
+        <div class="ending-text">You're the most special girl ever, Karina 💖</div>
     </div>
+</div>
 
-    <script src="cause.js">
-       
-    </script>
+<script>
+    const reasons = [
+        {
+            en: "Your smile brightens my entire world. 🌟",
+            ru: "Твоя улыбка освещает весь мой мир. 🌟"
+        },
+        {
+            en: "You understand me like no one else does. 💬",
+            ru: "Ты понимаешь меня, как никто другой. 💬"
+        },
+        {
+            en: "Every moment with you feels like magic. ✨",
+            ru: "Каждое мгновение с тобой как волшебство. ✨"
+        },
+        {
+            en: "I feel lucky every day to love someone like you. 🍀",
+            ru: "Я чувствую себя счастливым, любя тебя каждый день. 🍀"
+        }
+    ];
+
+    let current = 0;
+    const reasonBox = document.getElementById('reasons-container');
+    const counter = document.querySelector('.reason-counter');
+    const button = document.querySelector('.shuffle-button');
+    let translated = false;
+
+    function showReason(index) {
+        const text = translated ? reasons[index].ru : reasons[index].en;
+        reasonBox.textContent = text;
+        counter.textContent = `Reason ${index + 1} of ${reasons.length}`;
+    }
+
+    button.addEventListener('click', () => {
+        if (current < reasons.length) {
+            showReason(current);
+            current++;
+        } else {
+            reasonBox.textContent = "No more reasons, but my love is endless! 💞";
+            counter.textContent = "All reasons shown!";
+        }
+    });
+
+    document.getElementById('translateBtn').addEventListener('click', () => {
+        translated = !translated;
+        if (current > 0 && current <= reasons.length) {
+            showReason(current - 1);
+        }
+    });
+</script>
+
 </body>
 </html>
