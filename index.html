@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lovely Universe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background: url('assets/universe-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    .text-block {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 90%;
+      margin: auto;
+    }
+    audio {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="text-block">
+    <h1>Welcome to Our Lovely Universe 🌌</h1>
+    <p><strong>English:</strong> In this dreamy universe, our love shines brighter than all the stars.</p>
+    <p><strong>Russian:</strong> В этой сказочной вселенной наша любовь сияет ярче всех звёзд.</p>
+  </div>
+  <audio controls autoplay loop>
+    <source src="assets/love-music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
