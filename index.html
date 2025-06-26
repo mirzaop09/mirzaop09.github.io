@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Cutest Best Friend</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .translate-btn {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      padding: 10px 15px;
+      background-color: #ffc0cb;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .translate-btn:hover {
+      background-color: #ff99aa;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cursor"></div>
+  <div class="container">
+    <button class="translate-btn" onclick="toggleLanguage()">Translate 💬</button>
+
+    <h1 id="main-title">To My Cutie Bestie Girl 💕👯‍♀️</h1>
+    <div class="greeting" id="greeting-text">Welcome to our little pink paradise! 🌸💫</div>
+    <button class="cta-button" id="cta-button">
+      Click Me, Bestie 💖 Let’s Dive Into Our World! 🌷✨
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    let isRussian = false;
+
+    function toggleLanguage() {
+      isRussian = !isRussian;
+
+      document.getElementById("main-title").textContent = isRussian
+        ? "Моей милой подружке 💕👯‍♀️"
+        : "To My Cutie Bestie Girl 💕👯‍♀️";
+
+      document.getElementById("greeting-text").textContent = isRussian
+        ? "Добро пожаловать в наш розовый рай! 🌸💫"
+        : "Welcome to our little pink paradise! 🌸💫";
+
+      document.getElementById("cta-button").textContent = isRussian
+        ? "Нажми на меня, подружка 💖 Погружаемся в наш мир! 🌷✨"
+        : "Click Me, Bestie 💖 Let’s Dive Into Our World! 🌷✨";
+    }
+  </script>
+</body>
+
+</html>
