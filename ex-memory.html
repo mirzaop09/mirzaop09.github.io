@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Was Left Behind 💔</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to top right, #fce3ec, #f9f9f9);
+      text-align: center;
+      color: #444;
+      padding: 2rem 1rem;
+      overflow-x: hidden;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem 2.5rem;
+      border-radius: 25px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      max-width: 620px;
+      margin: 4rem auto;
+      animation: fadeIn 1.5s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      color: #888;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .back-btn {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: #999;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #777;
+    }
+
+    .translate-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      background: #d06c6c;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .translate-btn:hover {
+      background: #b25454;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="translate-btn" onclick="toggleLanguage()">🇷🇺 Translate</button>
+
+    <h1>Some wounds fade, but never truly vanish...</h1>
+    <p id="message">
+      "How are you, my ex?<br>
+      Even though we’re no longer together, you still live in the softest part of my heart.<br>
+      I don’t know if you’ll ever read this again, maybe months or years from now…<br>
+      But just know —<br>
+      I still miss you.<br>
+      I still think about that first night in Genshin, the paired avatars, our jokes, our Widgetable days… everything.<br>
+      You were never just someone — you were my person.<br>
+      Maybe I gave too much. Maybe you got tired.<br>
+      But my heart... it still whispers your name.<br>
+      If this message finds you again someday… just know, I loved you truly.<br>
+      And I still do."
+    </p>
+
+    <a href="index.html" class="back-btn">Back to Memories</a>
+  </div>
+
+  <script>
+    let english = true;
+    function toggleLanguage() {
+      const message = document.getElementById('message');
+      if (english) {
+        message.innerHTML = `"Как ты, моя бывшая?<br>
+        Хотя мы больше не вместе, ты всё ещё живёшь в самом мягком уголке моего сердца.<br>
+        Не знаю, прочитаешь ли ты это когда-нибудь снова — может быть, через месяцы или годы…<br>
+        Но просто знай —<br>
+        Я всё ещё скучаю по тебе.<br>
+        Я всё ещё помню ту первую ночь в Genshin, наши аватары в паре, наши шутки, наши дни в Widgetable… всё.<br>
+        Ты никогда не была просто кем-то — ты была моей.<br>
+        Может, я слишком много дал. Может, ты устала.<br>
+        Но моё сердце... оно всё ещё шепчет твоё имя.<br>
+        Если это сообщение снова найдёт тебя когда-нибудь… просто знай, я любил тебя по-настоящему.<br>
+        И до сих пор люблю."`;
+        english = false;
+      } else {
+        message.innerHTML = `"How are you, my ex?<br>
+        Even though we’re no longer together, you still live in the softest part of my heart.<br>
+        I don’t know if you’ll ever read this again, maybe months or years from now…<br>
+        But just know —<br>
+        I still miss you.<br>
+        I still think about that first night in Genshin, the paired avatars, our jokes, our Widgetable days… everything.<br>
+        You were never just someone — you were my person.<br>
+        Maybe I gave too much. Maybe you got tired.<br>
+        But my heart... it still whispers your name.<br>
+        If this message finds you again someday… just know, I loved you truly.<br>
+        And I still do."`;
+        english = true;
+      }
+    }
+  </script>
+</body>
+</html>
