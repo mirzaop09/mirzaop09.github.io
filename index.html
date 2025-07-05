@@ -40,6 +40,13 @@
     .birthday-btn:hover {
       background-color: #ff5c91;
     }
+
+    .fallback-note {
+      margin-top: 10px;
+      color: #888;
+      font-size: 14px;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -63,6 +70,11 @@
 
     <!-- 🎁 Birthday Gift Button -->
     <button class="birthday-btn" onclick="checkBirthdayGift()">🎁 Birthday Gift</button>
+
+    <!-- 📱 Fallback Note -->
+    <p class="fallback-note">
+      📱 If it doesn't open, please tap ⋮ and choose “Open in browser”
+    </p>
   </div>
 
   <script src="script.js"></script>
@@ -90,11 +102,10 @@
       const unlockDate = new Date("2025-10-25");
 
       if (today >= unlockDate) {
-        alert(isRussian
-          ? "🎉 Теперь ты можешь открыть свой подарок на день рождения!"
-          : "🎉 You may now open your birthday gift!"
-        );
+        // ✅ Redirect to new page
+        window.location.href = "gift.html";
       } else {
+        // ❌ Show emotional message
         alert(isRussian
           ? "Я сделал это давно, когда ты ещё любила меня. Я до сих пор тебя люблю. Пожалуйста, открой это 25 октября. Раньше оно не откроется."
           : "I had made this a long time ago, so I had written everything here when you used to love me. I still love you. So please, open it on 25th October. It won't open before that."
