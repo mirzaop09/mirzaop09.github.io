@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,19 +24,45 @@
     .translate-btn:hover {
       background-color: #ff99aa;
     }
+
+    .birthday-btn {
+      margin-top: 20px;
+      background-color: #ff7fa8;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .birthday-btn:hover {
+      background-color: #ff5c91;
+    }
   </style>
 </head>
-
 <body>
   <div class="cursor"></div>
   <div class="container">
+    <!-- 🌍 Translate Button -->
     <button class="translate-btn" onclick="toggleLanguage()">Translate 💬</button>
 
+    <!-- 💖 Main Heading -->
     <h1 id="main-title">To My Precious Karina 💖</h1>
-    <div class="greeting" id="greeting-text">Welcome to our little world of love, where every heartbeat belongs to you. 💞🌙</div>
+    
+    <!-- 💌 Greeting -->
+    <div class="greeting" id="greeting-text">
+      Welcome to our little world of love, where every heartbeat belongs to you. 💞🌙
+    </div>
+
+    <!-- 💋 Main CTA -->
     <button class="cta-button" id="cta-button">
       Tap Me, My Love 💋 Let’s Dive Into Our Magical Story! ✨❤️
     </button>
+
+    <!-- 🎁 Birthday Gift Button -->
+    <button class="birthday-btn" onclick="checkBirthdayGift()">🎁 Birthday Gift</button>
   </div>
 
   <script src="script.js"></script>
@@ -59,7 +84,23 @@
         ? "Нажми, моя любовь 💋 Погружаемся в нашу волшебную историю! ✨❤️"
         : "Tap Me, My Love 💋 Let’s Dive Into Our Magical Story! ✨❤️";
     }
+
+    function checkBirthdayGift() {
+      const today = new Date();
+      const unlockDate = new Date("2025-10-25");
+
+      if (today >= unlockDate) {
+        alert(isRussian
+          ? "🎉 Теперь ты можешь открыть свой подарок на день рождения!"
+          : "🎉 You may now open your birthday gift!"
+        );
+      } else {
+        alert(isRussian
+          ? "❌ "Я сделал это давно, когда ты ещё любила меня. Я до сих пор тебя люблю. Пожалуйста, открой это 25 октября. Раньше оно не откроется."
+          : "❌ I had made this a long time ago, so I had written everything here when you used to love me. I still love you. So please, open it on 25th October. It won't open before that."
+        );
+      }
+    }
   </script>
 </body>
-
 </html>
