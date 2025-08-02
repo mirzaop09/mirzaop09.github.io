@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Love Karina</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <link rel="stylesheet" href="style.css" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Buttons ❤️</title>
   <style>
-    /* 💌 Read My Heart Button Style */
-    .love-btn {
-      display: block;
-      margin: 25px auto;
-      padding: 15px 30px;
-      background: #ff4f8b;
-      color: #fff;
-      font-size: 1.3em;
-      font-weight: bold;
-      border-radius: 40px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(135deg, #ffd6e0, #fff0f5);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
-      text-decoration: none;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
     }
-
-    .love-btn:hover {
-      transform: scale(1.08);
-      background: #ff2f6b;
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: rgba(255,255,255,0.9);
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
-
-    .translate-btn {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      padding: 10px 15px;
-      background-color: #ffc0cb;
+    h1 {
+      color: #ff4d6d;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .btn {
+      background: linear-gradient(45deg, #ff4f8b, #ff7fa8);
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 1.2rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      font-weight: bold;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #ff2f6b, #ff5c91);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1> All Answer Here❤️</h1>
+    <button class="btn">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+    <button class="btn">4</button>
+  </div>
+</body>
+</html>      background-color: #ffc0cb;
       border: none;
       border-radius: 12px;
       font-weight: bold;
