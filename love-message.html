@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Karina ❤️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(135deg, #ffd6e0, #fff0f5);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 85vh;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #ff4d6d;
+      margin-bottom: 15px;
+    }
+    #message {
+      font-size: 1.05rem;
+      color: #444;
+      line-height: 1.6;
+      white-space: pre-line;
+      text-align: left;
+      flex: 1;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+    .bottom-line {
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #666;
+      font-style: italic;
+      text-align: center;
+    }
+    /* Hearts animation */
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 20px;
+      animation: float 6s linear infinite;
+      opacity: 0.7;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(1); opacity: 1; }
+      100% { transform: translateY(-20vh) scale(1.5); opacity: 0; }
+    }
+    /* Translator button */
+    .btn-container {
+      margin-top: 10px;
+      text-align: center;
+    }
+    button {
+      background: #ff4d6d;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #e93a5a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>For My Karina ❤️</h1>
+    <div id="message"></div>
+    <div class="btn-container">
+      <button onclick="toggleLanguage()">Translate 🇷🇺</button>
+    </div>
+    <div class="bottom-line">
+      I don't know what to say anymore... just that I love you.
+    </div>
+  </div>
+
+  <script>
+    // English & Russian messages
+    const englishMessage = `Karina,
+
+Thank you for being a part of my life, even if it feels like everything has ended for me now. I want you to know I still love you more than anything in this world, and I will love you forever. In every universe, I wish it could always be you and me together. Sometimes I just wish I could die and be reborn in a place where it’s only us—where nothing could ever separate us.
+
+I don’t know when you’ll read this, but please know that my heart still belongs to you. All I want is to see you happy for the rest of your life, even if that happiness isn’t with me. I stepped away because I hoped you would find someone better than me—someone who could give you the world. Every morning when I wake up, the first thing I do is pray for you. I pray that you’re safe, that you’re smiling, and that someone out there is loving you the way you deserve.
+
+The truth is, no other girl even matters to me. You’re the only one who ever truly loved me, and the only one I ever loved. You once told me you were just a mirage… but I would gladly be lost in that mirage forever. Without you, my life feels like something huge is missing.
+
+I’ve changed, Karina. I don’t like talking to anyone anymore. I don’t even enjoy using my phone. People have started to hate me because I can’t talk properly to anyone. I feel like I’ve lost my mind. Yesterday, on August 1st, a girl came up to me to talk, and I just yelled at her and walked away. I can’t help it—I don’t want anyone else.
+
+I know I’m not a good guy, but you’re the best person I’ve ever known. You didn’t choose me, and that’s my fault. I came into your life, and now I can’t let go, even though I know I should. Right now, I’m not even at home—I’m far away, living alone, because I don’t want to hurt anyone anymore.
+
+I’m sorry, Karina. Truly. But please know one thing: I will love you forever.
+
+Your dear boy,
+Kamil Mirza`;
+
+    const russianMessage = `Карина,
+
+Спасибо, что была частью моей жизни, даже если сейчас мне кажется, что всё закончилось. Я хочу, чтобы ты знала – я всё ещё люблю тебя больше всего на свете и буду любить вечно. В каждой вселенной я мечтаю, чтобы всегда были только ты и я. Иногда я просто хочу умереть и родиться заново в месте, где будем только мы – где ничто не сможет нас разлучить.
+
+Я не знаю, когда ты это прочитаешь, но, пожалуйста, знай – моё сердце всё ещё принадлежит тебе. Всё, чего я хочу – это видеть тебя счастливой всю твою жизнь, даже если это счастье будет не со мной. Я отошёл в сторону, потому что надеялся, что ты найдёшь кого-то лучше меня – того, кто сможет подарить тебе весь мир. Каждое утро, просыпаясь, я первым делом молюсь за тебя. Я молюсь, чтобы ты была в безопасности, чтобы улыбалась и чтобы кто-то любил тебя так, как ты заслуживаешь.
+
+Правда в том, что другие девушки для меня не имеют значения. Ты единственная, кто когда-либо по-настоящему любил меня, и единственная, кого я любил. Ты однажды сказала, что ты – мираж… но я с радостью потеряюсь в этом миражe навсегда. Без тебя моя жизнь кажется пустой и неполной.
+
+Я изменился, Карина. Мне больше не хочется ни с кем разговаривать. Мне даже не нравится пользоваться телефоном. Люди начали ненавидеть меня, потому что я не могу нормально ни с кем говорить. Я чувствую, что схожу с ума. Вчера, 1 августа, ко мне подошла девушка поговорить, и я просто накричал на неё и ушёл. Я не могу иначе – я не хочу никого другого.
+
+Я знаю, что я не хороший человек, а ты – лучший человек, которого я когда-либо знал. Ты не выбрала меня, и это моя вина. Я вошёл в твою жизнь и теперь не могу отпустить, хотя понимаю, что должен. Сейчас я даже не дома – я далеко, живу один, потому что не хочу никому причинять боль.
+
+Прости меня, Карина. Искренне. Но, пожалуйста, знай одно: я буду любить тебя вечно.
+
+Твой дорогой мальчик,
+Камиль Мирза`;
+
+    let currentLang = 'en';
+    const msgElement = document.getElementById('message');
+    msgElement.innerHTML = englishMessage;
+
+    function toggleLanguage() {
+      if (currentLang === 'en') {
+        msgElement.innerHTML = russianMessage;
+        currentLang = 'ru';
+      } else {
+        msgElement.innerHTML = englishMessage;
+        currentLang = 'en';
+      }
+    }
+
+    // Hearts animation
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
