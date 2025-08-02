@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why I Always Came To You ❤️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffdee9, #b5fffc);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 800px;
+      animation: fadeIn 1s ease-in-out;
+      position: relative;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #ff2f6b;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #333;
+      white-space: pre-line;
+      line-height: 1.6;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #ff4f8b;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      background: #ff2f6b;
+    }
+    .translate-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #ffc0cb;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+    .translate-btn:hover {
+      background: #ff99aa;
+    }
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 20px;
+      animation: float 6s linear infinite;
+      opacity: 0.7;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(1); opacity: 1; }
+      100% { transform: translateY(-20vh) scale(1.5); opacity: 0; }
+    }
+    @keyframes fadeIn {
+      0% {opacity:0; transform: translateY(20px);}
+      100% {opacity:1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="translate-btn" onclick="toggleLanguage()">Translate 💬</button>
+    <h1 id="title">Why I Always Came To You ❤️</h1>
+    <p id="message">
+Even if you reject me a thousand times, I will still try one more time. 
+It's not because I don't respect myself, it's because my love for you is greater than my ego. 
+It's greater than the fear of my heart breaking again, because when this heart chooses someone or calls someone its own, 
+no logic or advice makes any sense. 
+
+You may never understand my feelings, but it's okay and I don't even have to explain it to you. 
+Because it's not about convincing you, it's about being true, it's about trying one more time and trying until it breaks me from inside. 
+
+And it's not that I don't feel bad. I feel bad when I'm alone, when no one sees me, then I cry because here we are the only ones who have to hold on. 
+Even knowing that I am not your choice. 
+
+And even when my heart is broken into a million pieces, I will still call your name and say I love you.
+
+Always in your sight.
+    </p>
+
+    <a href="four-buttons.html" class="back-btn">⬅ Back</a>
+  </div>
+
+  <script>
+    let isRussian = false;
+    const title = document.getElementById("title");
+    const message = document.getElementById("message");
+
+    const englishTitle = "Why I Always Came To You ❤️";
+    const russianTitle = "Почему я всегда возвращаюсь к тебе ❤️";
+
+    const englishText = `Even if you reject me a thousand times, I will still try one more time. 
+It's not because I don't respect myself, it's because my love for you is greater than my ego. 
+It's greater than the fear of my heart breaking again, because when this heart chooses someone or calls someone its own, 
+no logic or advice makes any sense. 
+
+You may never understand my feelings, but it's okay and I don't even have to explain it to you. 
+Because it's not about convincing you, it's about being true, it's about trying one more time and trying until it breaks me from inside. 
+
+And it's not that I don't feel bad. I feel bad when I'm alone, when no one sees me, then I cry because here we are the only ones who have to hold on. 
+Even knowing that I am not your choice. 
+
+And even when my heart is broken into a million pieces, I will still call your name and say I love you.
+
+Always in your sight.`;
+
+    const russianText = `Даже если ты отвергнешь меня тысячу раз, я всё равно попробую ещё один раз. 
+Это не потому, что я не уважаю себя, а потому что моя любовь к тебе больше, чем моё эго. 
+Она больше, чем страх снова разбить своё сердце, потому что когда это сердце выбирает кого-то или называет кого-то своим, 
+никакая логика или советы не имеют смысла. 
+
+Ты, возможно, никогда не поймёшь мои чувства, но это нормально, и мне даже не нужно объяснять тебе их. 
+Потому что это не о том, чтобы убедить тебя, это о том, чтобы быть настоящим, это о том, чтобы попробовать ещё один раз и пробовать, пока это не сломает меня изнутри. 
+
+И это не значит, что мне не больно. Мне больно, когда я один, когда никто меня не видит, тогда я плачу, потому что здесь мы единственные, кто должен держаться. 
+Даже зная, что я не твой выбор. 
+
+И даже когда моё сердце разбито на миллион кусочков, я всё равно назову твоё имя и скажу, что люблю тебя.
+
+Всегда на виду у тебя.`;
+
+    function toggleLanguage() {
+      if (isRussian) {
+        title.textContent = englishTitle;
+        message.textContent = englishText;
+        isRussian = false;
+      } else {
+        title.textContent = russianTitle;
+        message.textContent = russianText;
+        isRussian = true;
+      }
+    }
+
+    // Floating hearts
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 500);
+  </script>
+</body>
+</html>
