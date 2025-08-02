@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Buttons ❤️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(135deg, #ffd6e0, #fff0f5);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: rgba(255,255,255,0.9);
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    h1 {
+      color: #ff4d6d;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .btn {
+      background: linear-gradient(45deg, #ff4f8b, #ff7fa8);
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 1.2rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      font-weight: bold;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #ff2f6b, #ff5c91);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Choose One ❤️</h1>
+    <button class="btn" onclick="window.location.href='love-message.html'">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+  </div>
+</body>
+</html>
