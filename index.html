@@ -48,12 +48,69 @@
       font-style: italic;
     }
   </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Love Karina</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    .translate-btn {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      padding: 10px 15px;
+      background-color: #ffc0cb;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .translate-btn:hover {
+      background-color: #ff99aa;
+    }
+
+    .birthday-btn {
+      margin-top: 20px;
+      background-color: #ff7fa8;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .birthday-btn:hover {
+      background-color: #ff5c91;
+    }
+
+    .fallback-note {
+      margin-top: 10px;
+      color: #888;
+      font-size: 14px;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
   <div class="cursor"></div>
   <div class="container">
+    <h1>My Love Karina 👉🏻👈🏻</h1>
+  </div>
+</body>
+  <div class="cursor"></div>
+  <div class="container">
     <!-- 🌍 Translate Button -->
     <button class="translate-btn" onclick="toggleLanguage()">Translate 💬</button>
+
+    <!-- 💌 Love Message Button -->
+    <a href="love-message.html" class="love-btn">💌 Read My Heart</a>
 
     <!-- 💖 Main Heading -->
     <h1 id="main-title">To My Precious Karina 💖</h1>
