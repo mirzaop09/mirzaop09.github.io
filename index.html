@@ -1,62 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Special Buttons ❤️</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Love Karina</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background: linear-gradient(135deg, #ffd6e0, #fff0f5);
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    /* 💌 Read My Heart Button Style */
+    .love-btn {
+      display: block;
+      margin: 25px auto;
+      padding: 15px 30px;
+      background: #ff4f8b;
+      color: #fff;
+      font-size: 1.3em;
+      font-weight: bold;
+      border-radius: 40px;
       text-align: center;
+      text-decoration: none;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
     }
-    .container {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      background: rgba(255,255,255,0.9);
-      padding: 30px 25px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    .love-btn:hover {
+      transform: scale(1.08);
+      background: #ff2f6b;
     }
-    h1 {
-      color: #ff4d6d;
-      font-size: 1.8rem;
-      margin-bottom: 10px;
+
+    .translate-btn {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      padding: 10px 15px;
+      background-color: #ffc0cb;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
     }
-    .btn {
-      background: linear-gradient(45deg, #ff4f8b, #ff7fa8);
+
+    .translate-btn:hover {
+      background-color: #ff99aa;
+    }
+
+    .birthday-btn {
+      margin-top: 20px;
+      background-color: #ff7fa8;
       color: white;
       border: none;
-      padding: 15px;
-      font-size: 1.2rem;
-      border-radius: 12px;
+      padding: 12px 28px;
+      border-radius: 20px;
+      font-size: 16px;
       cursor: pointer;
-      transition: transform 0.2s, background 0.3s;
-      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
-    .btn:hover {
-      transform: scale(1.05);
-      background: linear-gradient(45deg, #ff2f6b, #ff5c91);
+
+    .birthday-btn:hover {
+      background-color: #ff5c91;
+    }
+
+    .fallback-note {
+      margin-top: 10px;
+      color: #888;
+      font-size: 14px;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
+  <div class="cursor"></div>
   <div class="container">
-    <h1> All Answer Here❤️</h1>
-    <button class="btn">1</button>
-    <button class="btn">2</button>
-    <button class="btn">3</button>
-    <button class="btn">4</button>
+    <!-- 🌍 Translate Button -->
+    <button class="translate-btn" onclick="toggleLanguage()">Translate 💬</button>
+
+    <!-- 💖 Main Heading -->
+    <h1 id="main-title">To My Precious Karina 💖</h1>
+
+    <!-- 💌 Greeting -->
+    <div class="greeting" id="greeting-text">
+      Welcome to our little world of love, where every heartbeat belongs to you. 💞🌙
+    </div>
+
+    <!-- 💋 Main CTA -->
+    <button class="cta-button" id="cta-button">
+      Tap Me, My Love 💋 Let’s Dive Into Our Magical Story! ✨❤️
+    </button>
+
+    <!-- 🎁 Birthday Gift Button -->
+    <button class="birthday-btn" onclick="checkBirthdayGift()">🎁 Birthday Gift</button>
+
+    <!-- 💌 Love Message Button -->
+    <a href="love-message.html" class="love-btn">💌 Read This Please</a>
+
+    <!-- 📱 Fallback Note -->
+    <p class="fallback-note">
+      📱 If it doesn't open, please tap ⋮ and choose “Open in browser”
+    </p>
   </div>
+
+  <script src="script.js"></script>
+  <script>
+    let isRussian = false;
+
+    function toggleLanguage() {
+      isRussian = !isRussian;
+
+      document.getElementById("main-title").textContent = isRussian
+        ? "Моей драгоценной Карине 💖"
+        : "To My Precious Karina 💖";
+
+      document.getElementById("greeting-text").textContent = isRussian
+        ? "Добро пожаловать в наш мир любви, где каждое биение сердца принадлежит тебе. 💞🌙"
+        : "Welcome to our little world of love, where every heartbeat belongs to you. 💞🌙";
+
+      document.getElementById("cta-button").textContent = isRussian
+        ? "Нажми, моя любовь 💋 Погружаемся в нашу волшебную историю! ✨❤️"
+        : "Tap Me, My Love 💋 Let’s Dive Into Our Magical Story! ✨❤️";
+    }
+
+    function checkBirthdayGift() {
+      const today = new Date();
+      const unlockDate = new Date("2025-10-25");
+
+      if (today >= unlockDate) {
+        // ✅ Redirect to new page
+        window.location.href = "gift.html";
+      } else {
+        // ❌ Show emotional message
+        alert(isRussian
+          ? "Я сделал это давно, когда ты ещё любила меня. Я до сих пор тебя люблю. Пожалуйста, открой это 25 октября. Раньше оно не откроется."
+          : "I had made this a long time ago, so I had written everything here when you used to love me. I still love you. So please, open it on 25th October. It won't open before that."
+        );
+      }
+    }
+  </script>
 </body>
 </html>
